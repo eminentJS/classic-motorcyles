@@ -275,6 +275,70 @@ nav {
   text-align: center;
 }
 
+.feature {
+  position: relative;
+  isolation: isolate;
+}
+
+.feature::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 60%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(assets/feature-bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.feature__container h4 {
+  max-width: 600px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 300;
+  font-family: var(--header-font);
+  color: #b82049;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+.feature__container .section__header {
+  color: var(--white);
+  background-color: transparent;
+}
+
+.feature__grid {
+  isolation: isolate;
+  margin-top: 2rem;
+  display: grid;
+}
+
+.feature__content {
+  display: grid;
+  align-items: center;
+}
+
+.feature__content > div {
+  padding: 2rem;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  background-color: var(--white);
+  z-index: -1;
+}
+
+.feature__content .btn {
+  margin-top: 1rem;
+}
+
+.feature_video video {
+  width: 100%;
+}
+
 @media (width > 480px) {
   .banner__grid {
     grid-auto-rows: 280px;
