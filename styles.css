@@ -269,6 +269,12 @@ nav {
   direction: rtl;
 }
 
+.about__container .section__description {
+  max-width: 900px;
+  margin-inline: auto;
+  text-align: center;
+}
+
 @media (width > 480px) {
   .banner__grid {
     grid-auto-rows: 280px;
@@ -330,6 +336,10 @@ nav {
 
   .banner__grid img {
     display: flex;
+  }
+
+  .banner__strip {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .banner__strip__card:nth-child(4n),

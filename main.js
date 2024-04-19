@@ -35,3 +35,13 @@ ScrollReveal().reveal('.header__content .header__btn', {
   ...scrollRevealOption,
   delay: 1000,
 });
+
+// about container
+ScrollReveal().reveal('.about__container section__header', {
+  ...scrollRevealOption,
+});
+
+ScrollReveal().reveal('.about__container .section__description', {
+  ...scrollRevealOption,
+  delay: 500,
+});
