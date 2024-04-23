@@ -335,8 +335,107 @@ nav {
   margin-top: 1rem;
 }
 
-.feature_video video {
+.feature__video video {
   width: 100%;
+}
+
+.blog__grid {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.blog__card {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.blog__header {
+  padding: 1rem;
+}
+
+.blog__header h4 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: var(--header-font);
+  color: var(--text-dark);
+}
+
+.blog__card__footer {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--text-light);
+}
+
+.blog__card__footer div {
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.blog__card__footer span {
+  margin-right: 5px;
+  font-size: 1rem;
+}
+
+.blog__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 100%;
+  left: 0;
+  padding: 2rem;
+  background-color: rgba(22, 22, 22, 0.95);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.blog__content h4 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: var(--header-font);
+  color: var(--white);
+}
+
+.blog__content p {
+  color: var(--text-light);
+  list-style: 1.75rem;
+}
+
+.blog__card:hover .blog__content {
+  top: 0;
+}
+
+.instagram__container {
+  padding-block: 1rem;
+  overflow: hidden;
+}
+
+.instagram__flex {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  animation: scroll 45s linear infinite;
+}
+
+.instagram__flex img {
+  max-width: 120px;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 5px));
+  }
 }
 
 @media (width > 480px) {
@@ -362,6 +461,14 @@ nav {
   .banner__strip__card:nth-child(4n -1) {
     grid-auto-flow: dense;
     direction: rtl;
+  }
+
+  .blog__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .instagram__flex img {
+    max-width: 135px;
   }
 }
 
@@ -417,5 +524,26 @@ nav {
   .banner__strip__card:nth-child(6n -2) {
     grid-auto-flow: dense;
     direction: rtl;
+  }
+
+  .feature__grid {
+    grid-template-columns: repeat(2 1fr);
+    align-items: center;
+  }
+
+  .feature__content > div {
+    transform: translateX(2rem);
+  }
+
+  .feature__video video {
+    transform: translateX(-2rem);
+  }
+
+  .blog__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .instagram__flex img {
+    max-width: 150px;
   }
 }

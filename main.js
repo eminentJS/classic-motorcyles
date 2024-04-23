@@ -45,3 +45,19 @@ ScrollReveal().reveal('.about__container .section__description', {
   ...scrollRevealOption,
   delay: 500,
 });
+
+// blog container
+ScrollReveal().reveal('.blog__card', {
+  ...scrollRevealOption,
+  interval: 500,
+});
+
+const instagram = document.querySelector('.instagram__flex');
+
+const instagramContent = arry.from(instagram.children);
+
+instagramContent.array.forEach((element) => {
+  const duplicateNode = item.cloneNode(true);
+  duplicateNode.setAttribute('aria-hidder', true);
+  instagram.appendChild(duplicateNode);
+});
